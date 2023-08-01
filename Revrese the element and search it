@@ -1,0 +1,46 @@
+package Chinmay;
+import java.util.Scanner;
+public class ReverseSearch {
+     private static Scanner in;
+
+	public static void  main(String args[]) {
+    	 int n,i,x,reverse=0,j=0,digit;
+    	 in = new Scanner(System.in);
+    	 System.out.println("Enter the size of the array :");
+    	 n=in.nextInt();
+    	 int a[] = new int[n];
+    	 int b[] = new int[n];
+    	 System.out.println("Enter the individual elements of a array");
+    	 for(i=0;i<n;i++) {
+    		 a[i]=in.nextInt();
+    	 }
+    	 for(j=0;j<n;j++) {
+    		 x=a[j];
+    		 while(x!=0) { 
+    		  digit=x%10;
+    		  reverse=(reverse * 10 ) + digit;
+    		  x=x/10;
+    		 }
+    	   System.out.println("Display for reference: " + reverse);
+       	   b[j]=reverse;
+       	   reverse=0;
+    	  
+   		 }
+         System.out.println("reversed element array is ");
+    	 for(i=0;i<n;i++) {
+    	    System.out.println(b[i]);
+         }
+    	 
+    	 for(i=0;i<n;i++) {
+    		 x=a[i];
+    		 for(j=0;j<n;j++) {
+    			 if(x==b[j]) {
+    				 System.out.println("If the element of array after reverse is same");
+    				 System.out.println("The element " + x + " is present at " + j + "th position in array b");
+    			 } 
+    		 }
+    		 
+    	 }
+    	 
+     }
+}
