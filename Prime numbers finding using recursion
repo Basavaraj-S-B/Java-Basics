@@ -1,0 +1,30 @@
+package Chinmay;
+import java.util.Scanner;
+public class primeRecursion {
+  private static Scanner in;
+  public static void main(String args[]) {
+	   int n,prime;
+	   System.out.println("Enter the number:");
+	   in = new Scanner(System.in);
+	   n=in.nextInt();
+	   if(n==0 || n==1) {
+		 System.out.println("The number is " + n + " not prime");   
+	   }
+	   else {
+		  prime=isPrime(n,n/2);
+	      if(prime==1) 
+		    System.out.println("The number " + n + " is prime");
+		  else
+			System.out.println("The number " + n + " is not prime");
+	   }
+  }
+  static int isPrime(int n,int i) {
+	if(i==1) {
+		return 1;
+	}
+	if((n%i)==0)
+			return 0;
+	return isPrime(n,i-1);
+	
+  }
+}
