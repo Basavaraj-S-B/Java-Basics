@@ -1,0 +1,32 @@
+package Chinmay;
+import java.util.*;
+public class LinearSearch {
+    private static Scanner in;
+
+	public static void main(String args[]) {
+    	int i,SearchEle,n;
+    	in = new Scanner(System.in);
+    	System.out.println("Enter the size of the array");
+    	n=in.nextInt();
+    	int a[]= new int[n];
+		boolean flag = false;
+    	
+    	System.out.println("enter the individual elements of an array");
+        for(i=0;i<n;i++) {
+				a[i]=in.nextInt();
+		}
+	
+    	System.out.println("Enter the element to be searched: ");
+    	SearchEle=in.nextInt();
+    	
+      for(i=0;i<n;i++) {
+    	  if(a[i]==SearchEle) {
+    		  System.out.println("The elemenet is found at " + i + " POSITION");
+    		  flag=true;
+    	  }
+      }
+      if(flag==false) {
+    	  System.out.println("the element is not found in an array");
+      }
+    }
+}
