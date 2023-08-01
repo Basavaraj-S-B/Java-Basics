@@ -1,0 +1,25 @@
+package Chinmay;
+import java.util.Scanner;
+public class largestElement {
+	private static Scanner in;
+
+	public static void main(String args[]) {
+		int i,n,large;
+		in = new Scanner(System.in);
+		System.out.println("Enter the size of the array: ");
+		n=in.nextInt();
+		int a[]=new int[n];
+		System.out.println("Enter the individual elements present in the given array");
+		for(i=0;i<n;i++) {
+		   a[i]=in.nextInt();
+		}
+		large=a[0];
+		for(i=0;i<n;i++) {
+			if(a[i]>large) {
+				large=a[i];
+			}
+		}
+		System.out.println("The largest element present in the given array is " +large);
+	}
+
+}
