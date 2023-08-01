@@ -1,0 +1,32 @@
+package cli_ser;
+
+import java.io.*;
+import java.net.*;
+import java.util.Scanner;
+
+
+
+public class clistr {
+	
+	public static void main(String args[]) throws UnknownHostException, IOException
+	{
+		 String pattern;
+		 int temp;
+	     Scanner sc = new Scanner(System.in); 
+		 Socket s = new Socket("127.0.0.1",1343);
+	     Scanner sc1=new Scanner(s.getInputStream());	
+	     System.out.println("ENTER ANY STRING");
+	     pattern=sc.next();
+			
+	     PrintStream ps=new PrintStream(s.getOutputStream());
+	     ps.println(pattern);
+      
+		 temp=sc1.nextInt();
+	
+   		 System.out.println(temp);
+   		 System.out.println("original String is " + pattern);
+   		 
+   		
+	}
+}
+
