@@ -1,0 +1,28 @@
+package cli_ser;
+
+import java.io.IOException;
+import java.io.PrintStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class serstr {
+
+	public static void main(String args[]) throws IOException
+	{
+	    String	pattern;
+	    int temp;
+		ServerSocket s1=new ServerSocket(1343);
+		Socket ss=s1.accept();
+		Scanner sc=new Scanner(ss.getInputStream());
+		pattern =sc.next();
+		
+		temp=pattern.length();
+		
+		PrintStream ps =new PrintStream(ss.getOutputStream());
+		ps.println(temp);
+		
+		
+	}
+}
+
