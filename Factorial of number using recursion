@@ -1,0 +1,23 @@
+package Chinmay;
+import java.util.Scanner;
+public class factorialRecursion {
+	private static Scanner in;
+	
+	public static void main(String args[]) {
+		int n;
+		System.out.println("Enter the number for which factorial has to be found");
+		in = new Scanner(System.in);
+		n=in.nextInt();
+		int result=find_factorial(n);
+		System.out.println("The factorial of  " + n + " is " +result);
+	}
+	static int find_factorial(int n) {
+		if(n==1) {
+			return 1;
+		}
+		else 
+			return n*(find_factorial(n-1));
+		
+	}
+
+}
