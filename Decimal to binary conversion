@@ -1,0 +1,34 @@
+ package Chinmay;
+import java.util.Scanner;
+public class decTobin {
+	private static Scanner in;
+
+	public static void main(String args[]) {
+		int n;
+		in = new Scanner(System.in);
+		System.out.println("Enter the number");
+		n=in.nextInt();
+	    convert(n);
+	}
+	
+	static void convert(int n) {
+		int i=0,j;
+		int a[]=new int[50];
+		System.out.println("Binary representation is:");
+		if(n==0) {
+			System.out.println(0);
+		}
+		else {
+		while(n>0) {
+			a[i]=n%2;
+			n=n/2;
+			i++;
+			
+		}
+		}
+		for(j=i-1;j>=0;j--) {
+			System.out.print(" " +a[j]);
+		}
+	}
+
+}
