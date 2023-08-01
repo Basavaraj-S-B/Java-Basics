@@ -1,0 +1,31 @@
+package cli_ser;
+
+import java.io.*;
+import java.net.*;
+import java.util.Scanner;
+
+
+
+public class SerStrLess {
+	
+	public static void main(String args[]) throws UnknownHostException, IOException
+	{
+		 String pattern;
+		 int temp;
+		 DatagramSocket ds = new DatagramSocket(3001);	
+		 byte[] buf = new byte[1024];
+	     
+		 
+		 DatagramPacket dp=new DatagramPacket(buf,1024);
+		 ds.receive(dp);
+		 
+		 pattern=new String(dp.getData(),0,dp.getLength());
+		 System.out.println(pattern);
+		 System.out.println(pattern.length());
+		 
+		 DatagramPacket dp1=new DatagramPacket(pattern.getBytes(),pattern.length());
+		 ds.send(dp1);
+		 ds.close();
+	    
+	}
+}
