@@ -1,0 +1,8 @@
+package Chinmay;
+
+public class add2 {
+   public static void main(String args[]) {
+	   int a1=10,a2=20;
+	   System.out.print(a1+a2);
+   }
+}
