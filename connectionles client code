@@ -1,0 +1,33 @@
+package cli_ser;
+
+import java.io.*;
+import java.net.*;
+import java.util.Scanner;
+
+
+
+public class CliStrLess {
+	
+	public static void main(String args[]) throws UnknownHostException, IOException
+	{
+		 String pattern;
+		 int temp;
+	     Scanner sc = new Scanner(System.in); 
+		 DatagramSocket ds = new DatagramSocket();	
+	     System.out.println("ENTER ANY STRING");
+	     pattern=sc.next();
+		 InetAddress ip=InetAddress.getByName("127.0.0.1");
+		 
+		 DatagramPacket dp=new DatagramPacket(pattern.getBytes(),pattern.length(),ip,3001);
+		 ds.send(dp);
+		 byte[] buf1 = new byte[1024];
+		 DatagramPacket dp1=new DatagramPacket(buf1,1024);
+		 ds.receive(dp1);
+		 
+		
+		 pattern=new String(dp1.getData(),0,dp1.getLength());
+		 System.out.println(pattern);
+		 System.out.println(pattern.length());
+	    
+	}
+}
