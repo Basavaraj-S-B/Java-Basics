@@ -1,0 +1,23 @@
+package Chinmay;
+import java.util.Scanner;
+public class FibonacciRecursion {
+	 private static Scanner in;
+	    static int nextNum(int a,int b,int n) {
+	    	int c;
+	    	if(n>=1) {
+			c=a+b;
+			System.out.print("," +c);
+			return nextNum(b,c,n-1);
+	    	}
+	    	return 0;
+		}
+		public static void main(String args[]) {
+	    	  int a=0,b=1,n;
+	    	  in = new Scanner(System.in);
+	    	  System.out.println("Enter the range: ");
+	    	  n=in.nextInt();
+	    	  System.out.print("" +a+ "," + b);
+	    	  nextNum(a,b,n);
+	    	  
+		}		
+}
