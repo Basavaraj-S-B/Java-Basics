@@ -1,0 +1,26 @@
+package Chinmay;
+import java.util.Scanner;
+public class Armstrong {
+      private static Scanner in;
+
+	public static void main(String args[]) {
+    	  int int1,rem,cube,sum=0,temp;
+    	  System.out.println("Enter the number to be validated");
+    	  in = new Scanner(System.in);
+    	  int1=in.nextInt();
+    	  temp=int1;
+    	  while(int1>0) {
+    		  rem=int1%10;
+    		  cube=rem*rem*rem;
+    		  sum=sum+cube;
+    		  int1=int1/10;
+    	  }
+    	  if(temp==sum) {
+    		  System.out.println("The number " + temp + " is a armstrong number");
+    	  }
+    	  else {
+    		  System.out.println("The number " + temp + " is not a armstrong number");
+    	  }
+    	  
+      }
+}
