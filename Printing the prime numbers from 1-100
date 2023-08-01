@@ -1,0 +1,29 @@
+package Chinmay;
+import java.util.Scanner;
+public class Prime1to100 {
+	public static boolean isPrime(int n) {
+		int i;
+		if(n<2) {
+			return false;
+		}
+		for(i=2;i<n/2;i++) {
+	    	 if((n%i)==0) {
+	    		 return false;
+	    	 }
+		}
+		return true;
+	}
+	
+	public static void main(String[] args) {
+     int size,i;
+     System.out.println("Enter the Size");
+     Scanner in = new Scanner(System.in);
+     size=in.nextInt();
+     for(i=1;i<=size;i++) {
+    	 if(isPrime(i)) {
+    		 System.out.println(i);
+    	 }
+     }
+	}
+}
+	
