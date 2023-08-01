@@ -1,0 +1,20 @@
+package Chinmay;
+import java.util.Scanner;
+public class SumOfDigit {
+     private static Scanner in;
+
+	public static void main(String args[]) {
+    	 int int1,sum=0,rem,temp;
+    	 in = new Scanner(System.in);
+    	 System.out.println("Enter the number:");
+    	 int1=in.nextInt();
+    	 temp=int1;
+    	 while(int1>0) {
+    		 rem=int1%10;
+    		 sum=sum+rem;
+    		 int1=int1/10;
+    	 }
+    	 System.out.println("The sum of the individual elements present in the given number " +temp+" is " + sum);
+    	 
+     }
+}
