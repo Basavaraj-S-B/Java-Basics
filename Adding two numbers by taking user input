@@ -1,0 +1,16 @@
+package Chinmay;
+import java.util.Scanner;
+
+public class adduser {
+   public static void main(String args[]) {
+	   int a1,a2;
+	   try (Scanner in = new Scanner(System.in)) {
+		System.out.println("Enter the valuer of a1:");
+		   a1=in.nextInt();
+		   System.out.println("Enter the value of a2: ");
+		   a2=in.nextInt();
+	}
+	   System.out.println("the sum is " + (a1+a2));
+	   
+   }
+}
