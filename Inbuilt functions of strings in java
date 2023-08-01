@@ -1,0 +1,50 @@
+
+package Chinmay;
+import java.util.*;
+public class InBuiltDemo {
+      private static Scanner in;
+
+	public static void main(String args[]) {
+    	  int i,n,j;
+    	  boolean res=false;
+    	  in = new Scanner(System.in);
+    	  n=in.nextInt();
+    	  in.nextLine();
+    	  System.out.println("N is "+ n);
+    	  ArrayList<String> a1 = new ArrayList<String>();
+    	  ArrayList<String> b1 = new ArrayList<String>();
+    	  System.out.println("Enter the a list ");
+    	  for(i=0;i<n;i++) {
+    		  a1.add(in.nextLine());
+    	  }
+    	  System.out.println("Enter the b list ");
+    	  for(i=0;i<n;i++) {
+    		  b1.add(in.nextLine());
+    	  }
+    	  
+    	  for(i=0;i<n;i++) {
+    	       res=a1.equals(b1);
+    	  }
+    	  if(res) {
+    		  System.out.println(res);
+    	  }
+    	  else {
+    		  System.out.println(res);
+    	  }
+    	  
+    	  System.out.println("Example 2");
+    	  System.out.println("Enter string one");
+    	  String s1 = in.next();
+    	  System.out.println("Enter string two");
+    	  String s2 = in.next();
+    	  System.out.println(s1.concat(s2));
+    	  System.out.println(s1.compareTo(s2));
+    	  System.out.println(s1.isEmpty());
+    	  System.out.println(s1.length());
+    	  System.out.println(s2.length());
+    	  System.out.println(s1.toLowerCase());
+    	  System.out.println(s2.toLowerCase());
+    	  System.out.println(s2.toUpperCase());
+    	  System.out.println(s2.toUpperCase());
+      }
+}
